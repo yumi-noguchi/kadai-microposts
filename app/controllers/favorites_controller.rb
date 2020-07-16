@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
   
   def create
     @micropost = Micropost.find(params[:micropost_id])
-    @micropost.favorite(current_user)
+    @micropost.like(current_user)
     flash[:success] = "この投稿をお気に入りに登録しました"
     redirect_to user
   end
