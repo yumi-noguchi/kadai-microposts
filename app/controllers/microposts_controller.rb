@@ -29,9 +29,6 @@ class MicropostsController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
   
-  def favorites
-    @microposts = current_user.favorite_microposts.includes(:user).recent
-  end
 
   private
 

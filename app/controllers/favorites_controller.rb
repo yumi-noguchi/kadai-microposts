@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   before_action :require_user_logged_in
   
   def create
-    @micropost = Micropost.find(params[:micropost_id])
+    @micropost = Micropost.find(params[:id])
     @micropost.like(current_user)
     flash[:success] = "この投稿をお気に入りに登録しました"
     redirect_to user
