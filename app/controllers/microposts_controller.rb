@@ -7,8 +7,6 @@ class MicropostsController < ApplicationController
   end
   
   def show
-    @favorite = current_user.favorites.find_by(micropost_id: @micropost.id)
-    @favorites = @micropost.fav_users
   end
 
   def create
